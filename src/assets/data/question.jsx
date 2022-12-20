@@ -10,7 +10,7 @@ export const QuestionData = [
       id:2,
       title:"내가 생각하는 서현이의 옷 스타일은?",
       answera:"홍대 힙찔이",
-      answerb:"성인이 되고 싶어하는 고딩룩",
+      answerb:"어른스러워 보이고 싶어하는 잼민이",
       type:"EI"
   },
   {
