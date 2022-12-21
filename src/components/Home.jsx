@@ -14,7 +14,7 @@ export default function Home() {
             당신이 생각하는 서현이의 매력 포인트는?
         </Title>
         <LogoImg>
-            <img src = {logoimg} alt="" style={{width:"40%",borderRadius: "15px"}}/>
+            <img src = {logoimg} alt="" style={{width:"60%",borderRadius: "15px"}}/>
         </LogoImg>
         <Button onClick={() => {navigate("/question")}}>
             게임 시작!
@@ -36,6 +36,7 @@ const Button = styled.button`
     padding: 15px 20px;
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 40%;
 `
 
 const LogoImg = styled.div`
@@ -54,6 +55,10 @@ const Container = styled.div`
     //display: flex;
     height: 100%;
     background-color: #ecaedf;
+    display: flex;
+    min-height: 70vh;
+    flex-direction: column;
+    align-items: center;
 `
 const Title = styled.h2`
     align-items: center;
@@ -71,6 +76,8 @@ const Header = styled.header`
     align-items: center;
     justify-content: center;
     height: 70px;
+    width: 100%;
+    
 `
 const Footer = styled.footer`
     //display: flex;
@@ -79,4 +86,5 @@ const Footer = styled.footer`
     justify-content: center;
     align-items: center;
     font-size: 15px;
+    width: 100%;
 `

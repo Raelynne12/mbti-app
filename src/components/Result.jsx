@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import {ResultData} from "../assets/data/result"
 import styled from "styled-components"
+import KakaoSharedButton from './KakaoSharedButton'
 
 export default function Result() {
   const navigate = useNavigate()
@@ -20,16 +21,16 @@ export default function Result() {
 
   return (
     <Container>
-    <Header>나랑 놀아조</Header>
-    <Title>당신이 생각하는 서현이의 매력 포인트는 ?</Title>
+    <Header>서현이의 매력 포인트는</Header>
     <LogoImg>
-        <img src = {result.image} alt={result.name} style={{width:"70%", border: "8px dotted #fff"}}/>
+        <img src = {result.image} alt={result.name} style={{width:"45%", border: "8px dotted #fff"}}/>
     </LogoImg>
     <Results>{result.name}</Results>
     <Desc>{result.desc}</Desc>
     <Button onClick = {() => {navigate("/")}}>
         다시하기
     </Button>
+    <KakaoSharedButton data={result}></KakaoSharedButton>
     <Footer> CopyrightⓒRaelynne. All rights reserved.</Footer>
 </Container>
   )
@@ -53,13 +54,13 @@ const Results = styled.h2`
 
 const Button = styled.button`
     font-family: inherit;
-    font-size: 20px;
+    font-size: 17px;
     border: none;
     outline: none;
     background-color: #000;
     color: #fff;
-    padding: 15px 20px;
-    margin-top: 30px;
+    padding: 7px 7px;
+    margin-top: 20px;
     margin-bottom: 30px;
 `
 
@@ -70,15 +71,13 @@ const LogoImg = styled.div`
 `
 
 const Container = styled.div`
-    //display: flex;
+    display: flex;
     background-color: #ecaedf;
-`
-const Title = styled.h2`
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
     justify-content: center;
-    margin-top: 40px;
-    font-size: clamp(24px, 5vw, 48px);
-    word-break: keep-all;
+    align-items: center;
 `
 const Header = styled.header`
     display: flex;
@@ -89,6 +88,7 @@ const Header = styled.header`
     align-items: center;
     justify-content: center;
     height: 50px;
+    width: 100%;
 `
 const Footer = styled.footer`
     //display: flex;
@@ -97,4 +97,5 @@ const Footer = styled.footer`
     justify-content: center;
     align-items: center;
     font-size: small;
+    width: 100%;
 `

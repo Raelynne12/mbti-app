@@ -107,6 +107,7 @@ const Button = styled.button`
 const Container = styled.div`
     //display: flex;
     background-color: #ecaedf;
+    resize: none;
 `
 const Title = styled.h2`
     align-items: center;

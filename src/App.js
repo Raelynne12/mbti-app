@@ -7,7 +7,7 @@ import Result from './components/Result';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App" style={{height:"100%"}}>
+      <div className="App" style={{height:"600px"}}>
         <Routes>
           <Route path = "/" element = {<Home></Home>}/>
           <Route path="/question" element = {<Question></Question>}/>

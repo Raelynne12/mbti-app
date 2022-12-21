@@ -17,7 +17,7 @@ export const QuestionData = [
       id:3,
       title:"서현이가 주로 당신에게 하는 행동은?",
       answera:"장난이 좀 심하네 ㅋ",
-      answerb:"가식이 좀 있네 ㅎ",
+      answerb:"가식이 좀 떠네 ㅎ",
       type:"EI"
   },
   {
